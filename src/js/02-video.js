@@ -6,7 +6,7 @@ const TIMECODE_KEY = "videoplayer-current-time";
 const iframe = document.querySelector('#vimeo-player');
 const player = new Vimeo(iframe);  
 
-player.setCurrentTime(Number(load(TIMECODE_KEY)));
+player.setCurrentTime(load(TIMECODE_KEY) || 0);
  
 const onTimeUpdateToStorage = function (data) {
     console.log( JSON.stringify(data.seconds))
