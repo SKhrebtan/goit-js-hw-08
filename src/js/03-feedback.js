@@ -29,6 +29,7 @@ if (message.value === '' || email.value === '') {
     console.log(formData);
     feedbackForm.reset();
     remove(FORMDATA_KEY);
+    formData = {};
 }
 
 
