@@ -8,8 +8,7 @@ const player = new Vimeo(iframe);
 
 player.setCurrentTime(load(TIMECODE_KEY) || 0);
  
-const onTimeUpdateToStorage = function (data) {
-    const { seconds } = data;
+const onTimeUpdateToStorage = function ({ seconds }) {
     console.log(JSON.stringify(seconds));
     save(TIMECODE_KEY, seconds);
 }
